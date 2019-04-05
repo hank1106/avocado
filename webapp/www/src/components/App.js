@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
-import '../css/App.css';
 import Header from './Header.js';
-import MusicCarousel from './MusicCarousel.js';
+import {BrowserRouter, Route} from 'react-router-dom';
+import Home from './Home'
+import Music from './Music'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <div className="banner"><MusicCarousel /></div>
-      </div>
+      <BrowserRouter>
+        <main>
+          <Route exact path="/" component={Home} />
+          <Route path="/Music" component={Music} />
+        </main>
+      </BrowserRouter>
     );
   }
 }
