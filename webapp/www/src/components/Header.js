@@ -1,41 +1,24 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import '../css/Header.css';
 import {NavLink} from 'react-router-dom'
+import UserAvatar from 'react-user-avatar/user-avatar.js';
+
+type State = {
+  loggedIn: boolean,
+}
 
 class Header extends Component {
+  state = {
+    loggedIn : true,
+  }
   render() {
     return (
-      // <div>
-      //   <nav className="navbar navbar-expand-lg navbar-light Header_canvas">
-      //   <a className="navbar-brand" href="#">Avocado</a>
-      //   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      //     <span className="navbar-toggler-icon"></span>
-      //   </button>
-      //
-      //   <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      //     <ul className="navbar-nav mr-auto">
-      //       <li className="nav-item active">
-      //         <a className="nav-link" href="#">Music <span className="sr-only">(current)</span></a>
-      //       </li>
-      //       <li className="nav-item active">
-      //         <a className="nav-link" href="#">Movies <span className="sr-only">(current)</span></a>
-      //       </li>
-      //       <li className="nav-item active">
-      //         <a className="nav-link" href="#">Books <span className="sr-only">(current)</span></a>
-      //       </li>
-      //     </ul>
-      //   </div>
-      //   </nav>
-      // </div>
-      <header className="flex items-center justify-between px4">
-        <h1 className="h1">Avocado</h1>
-        <nav>
+      <header className="flex items-center justify-between px4 border">
+        <nav className="justify-start">
           <NavLink
             exact
             to="/"
             className="p1 mx2 black rounded text-decoration-none"
-            activeClassName="bg-white"
           >
             Avocado
           </NavLink>
@@ -43,11 +26,43 @@ class Header extends Component {
             exact
             to="/Music"
             className="p1 mx2 black rounded text-decoration-none"
-            activeClassName="bg-white"
+            activeClassName=""
           >
             Music
           </NavLink>
+          <NavLink
+            exact
+            to="/Movies"
+            className="p1 mx2 black rounded text-decoration-none"
+            activeClassName=""
+          >
+            Movies
+          </NavLink>
+          <NavLink
+            exact
+            to="/Books"
+            className="p1 mx2 black rounded text-decoration-none"
+            activeClassName=""
+          >
+            Books
+          </NavLink>
         </nav>
+        {this.state.loggedIn &&(
+          <UserAvatar
+            size="30"
+            name="Will Binns-Smith"
+            src="https://pbs.twimg.com/profile_images/429442426038538240/6Ac9kykG_400x400.jpeg" />
+        )}
+        {!this.state.loggedIn &&(
+          <NavLink
+            exact
+            to="/Login"
+            className="p1 mx2 black rounded text-decoration-none"
+            activeClassName=""
+          >
+          login
+          </NavLink>
+        )}
       </header>
     );
   }

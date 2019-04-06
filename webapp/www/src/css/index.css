@@ -1,12 +1,12 @@
 /**  Basic Page CSS **/
 body {
   font-weight: 200;
-  background-color: white;
+  background-color: #F5F5F5;
 }
 
 header a,
 footer a {
-  color: #61dafb;
+  color: black;
 }
 
 footer {

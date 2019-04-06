@@ -6,7 +6,7 @@ class Music extends Component {
   render() {
     return (
       <div>
-        <div className="banner"><MusicCarousel /></div>
+        <MusicCarousel />
       </div>
     );
   }

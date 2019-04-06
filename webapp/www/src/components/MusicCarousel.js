@@ -7,16 +7,18 @@ import albumcover2 from '../assets/jt.jpeg';
 import albumcover3 from '../assets/album3.jpeg';
 
 
- 
+
 class MusicCarousel extends Component {
     render() {
         return (
             <Carousel width={550} showThumbs={false} dynamicHeight={true} autoPlay={true} interval={2000} infiniteLoop={true}>
                 <div>
                     <img src={albumcover2} />
+                    <img src={albumcover3} />
                 </div>
                 <div>
                     <img src={albumcover1} />
+                    <img src={albumcover3} />
                 </div>
                 <div>
                     <img src={albumcover3} />
@@ -25,5 +27,5 @@ class MusicCarousel extends Component {
         );
     }
 }
- 
+
 export default MusicCarousel;
