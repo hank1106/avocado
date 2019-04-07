@@ -1,0 +1,20 @@
+.caro {
+  width:800px;
+}
+
+.desc{
+  font-size: 12px;
+}
+
+img{
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+.cutoff{
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
