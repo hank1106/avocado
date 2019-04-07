@@ -9,9 +9,9 @@ class MusicCarousel extends Component {
     render() {
         return (
           <div className="flex mt4 ml4">
-            <Carousel controls={false} className="caro desc pl3">
+            <Carousel controls={false} className="caro desc ml3 border-top">
               <Carousel.Item>
-               <div className="clearfix">
+               <div className="clearfix pt2">
                <div class="p1 rounded col col-3 cutoff">
                  <img src="https://lastfm-img2.akamaized.net/i/u/300x300/b3604006f4e54e73b76246962135dff8.png"/>
                  <a class="m0"><div className="cutoff">My Beautiful Dark Twisted Fantasy</div></a>
@@ -55,7 +55,7 @@ class MusicCarousel extends Component {
                </div>
               </Carousel.Item>
               <Carousel.Item>
-               <div className="clearfix">
+               <div className="clearfix pt2">
                <div class="p1 rounded col col-3">
                  <img src="https://lastfm-img2.akamaized.net/i/u/300x300/3d61b59130d858416b7725b6e45eb833.png"/>
                  <p class="m0">Days Before Rodeo</p>
