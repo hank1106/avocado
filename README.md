@@ -1,2 +1,2 @@
 # avocado
-## Navigate to www folder and run npm start
+## Navigate to www folder. Run install and then run npm start.
