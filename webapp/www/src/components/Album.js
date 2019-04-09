@@ -6,25 +6,30 @@ class Album extends Component {
     super(props);
 
     this.state = {
-      albumObj: [],
+      albumObj: {},
+      id: "",
     };
   }
 
-  render() {
+
+  componentDidMount() {
     const {id} = this.props.match.params;
+    this.setState({id: this.props.match.params.id});
     fetch(`http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=89c323534df2d043fed5a8c702d8d91d&mbid=${id}&format=json`)
       .then(res => res.json())
-      .then(json => {
+      .then(data => {
         this.setState({
-          albumObj: json
+          albumObj: data.album,
         });
       });
+  }
+  render() {
     return (
       <div>
-        <h6 className="m4">The album id is {id}</h6>
-        <p>The album is dynamically fetched from last fm api and printed in console log</p>
-        {console.log(this.state.albumObj)}
-        {this.state.albumObj.toString()}
+        <h6 className="m4">The album id is {this.state.id}</h6>
+        <h1>{this.state.albumObj.name}</h1>
+        <br />
+        <h1>{this.state.albumObj.artist}</h1>
       </div>
     );
   }
