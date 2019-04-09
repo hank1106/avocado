@@ -29,6 +29,7 @@ class Album extends Component {
         <h6 className="m4">The album id is {this.state.id}</h6>
         <h1>{this.state.albumObj.name}</h1>
         <br />
+        artist name:
         <h1>{this.state.albumObj.artist}</h1>
       </div>
     );
