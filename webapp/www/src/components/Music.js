@@ -7,7 +7,16 @@ import '../css/Music.css';
 class Music extends Component {
   render() {
     return (
-      <MusicCarousel />
+      <div>
+        <div className = "row mt2">
+          <div className="col-4"></div>
+          <form className="col-4">
+            <input type="text" className="input_box" />
+          </form>
+          <div class="col-4"></div>
+        </div>
+        <MusicCarousel />
+      </div>
     );
   }
 }
