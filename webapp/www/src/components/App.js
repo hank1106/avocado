@@ -5,6 +5,7 @@ import Home from './Home'
 import Music from './Music'
 import Album from './Album'
 import NotFound from './NotFound'
+import Footer from './Footer'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path="/Album/:id" component={Album} />
             <Route component={NotFound} />
           </Switch>
+          <Footer />
         </main>
       </BrowserRouter>
     );
