@@ -8,7 +8,6 @@ class AlbumProfileWidget extends Component {
 
     this.state = {
       albumObj: {},
-      loading: true,
     };
   }
 
