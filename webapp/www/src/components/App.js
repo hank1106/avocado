@@ -13,7 +13,6 @@ class App extends Component {
       <BrowserRouter>
         <main>
           <Header />
-
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/Music" component={Music} />

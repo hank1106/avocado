@@ -41,9 +41,9 @@ class AlbumIntro extends Component {
                charLimit={250}
                readMoreText="Read more"
                readLessText="Read less"
-           >
+        >
                {text}
-           </ReadMoreAndLess>
+        </ReadMoreAndLess>
       </div>
     );
   }
