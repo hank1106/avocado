@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import logo from "../logo.svg";
 import _ from "lodash";
+import '../css/AlbumTrackList.css';
 
 class AlbumTrackList extends Component {
 	constructor(props) {
@@ -34,11 +35,14 @@ class AlbumTrackList extends Component {
     const tracks = _.get(this.state.albumObj, "tracks.track");
 		if (tracks == null) return null;
 		return (
-			<ul>
-				{tracks.map(track => {
-					return <li>{track.name}</li>;
-				})}
-			</ul>
+			<div>
+				<h6>Album Track List</h6>
+				<ul>
+					{tracks.map(track => {
+						return <div>{track.name}</div>;
+					})}
+				</ul>
+			</div>
 		);
 	}
 }
