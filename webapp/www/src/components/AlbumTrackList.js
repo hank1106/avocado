@@ -2,16 +2,17 @@ import React, {Component} from "react";
 import logo from "../logo.svg";
 import _ from "lodash";
 
-class AlbumProfileWidget extends Component {
+class AlbumTrackList extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			albumObj: {}
+    this.state = {
+			albumObj: {},
+			loading: true
 		};
 	}
 
-	componentDidMount() {
+  componentDidMount() {
 		this.getAlbumData();
 	}
 
@@ -30,18 +31,16 @@ class AlbumProfileWidget extends Component {
 	}
 
 	render() {
-		const imgurl = _.get(this.state.albumObj, "image[3].#text");
-		const albumName = _.get(this.state.albumObj, "name");
-		const artist = _.get(this.state.albumObj, "artist");
-		const tracks = _.get(this.state.albumObj, "tracks.track");
+    const tracks = _.get(this.state.albumObj, "tracks.track");
+		if (tracks == null) return null;
 		return (
-			<div>
-				<h5>{albumName}</h5>
-				<h6>{artist}</h6>
-				<img src={imgurl} className="mt1" height="30" width="30" />
-			</div>
+			<ul>
+				{tracks.map(track => {
+					return <li>{track.name}</li>;
+				})}
+			</ul>
 		);
 	}
 }
 
-export default AlbumProfileWidget;
+export default AlbumTrackList;

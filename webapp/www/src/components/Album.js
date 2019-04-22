@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import AlbumProfileWidget from './AlbumProfileWidget.js';
 import AlbumIntro from './AlbumIntro.js';
 import AlbumRatingWidget from './AlbumRatingWidget.js';
+import AlbumTrackList from './AlbumTrackList'
 
 class Album extends Component {
   render() {
@@ -15,9 +16,11 @@ class Album extends Component {
           </div>
         </div>
         <AlbumIntro id={this.props.match.params.id} />
+        <div className="mt3">
+          <AlbumTrackList id={this.props.match.params.id}/>
+        </div>
       </div>
     );
-  }
-}
+  }}
 
 export default Album;
