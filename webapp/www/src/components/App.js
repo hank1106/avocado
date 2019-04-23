@@ -6,6 +6,7 @@ import Music from "./Music";
 import Album from "./Album";
 import NotFound from "./NotFound";
 import Footer from "./Footer";
+import Search from "./Search";
 
 class App extends Component {
 	render() {
@@ -17,6 +18,7 @@ class App extends Component {
 						<Route exact path="/" component={Home} />
 						<Route path="/Music" component={Music} />
 						<Route path="/Album/:id" component={Album} />
+						<Route path="/Search" component={Search} />
 						<Route component={NotFound} />
 					</Switch>
 					<Footer />
