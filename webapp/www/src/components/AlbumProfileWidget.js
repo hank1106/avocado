@@ -38,7 +38,7 @@ class AlbumProfileWidget extends Component {
 			<div>
 				<h5>{albumName}</h5>
 				<h6>{artist}</h6>
-				<img src={imgurl} className="mt1" height="30" width="30" />
+				<img src={imgurl} className="mt1"/>
 			</div>
 		);
 	}

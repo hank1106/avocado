@@ -1,0 +1,15 @@
+/**  change height to max to allow non square images **/
+.search_img{
+  width: 90px;
+  height: 90px;
+}
+
+.strict_one_line{
+  white-space: nowrap;
+}
+
+.subtext{
+  color:grey;
+  font-size: 14px;
+  white-space: nowrap;
+}

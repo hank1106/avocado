@@ -37,7 +37,7 @@ class AlbumTrackList extends Component {
 		return (
 			<div>
 				<h6>Album Track List</h6>
-				<ul>
+				<ul className="tracklist_ul">
 					{tracks.map(track => {
 						return <div>{track.name}</div>;
 					})}

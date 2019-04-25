@@ -14,7 +14,7 @@ class AlbumRatingWidget extends Component {
           <div className="p1">
             <Rater
               total={5}
-              rating={3.4}
+              rating={4}
               interactive={false}
             />
             <p className="misc_text">1 person has rated this album</p>
