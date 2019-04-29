@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 import AlbumProfileWidget from './AlbumProfileWidget.js';
 import AlbumIntro from './AlbumIntro.js';
 import AlbumRatingWidget from './AlbumRatingWidget.js';
-import AlbumTrackList from './AlbumTrackList'
+import AlbumTrackList from './AlbumTrackList.js'
 
 class Album extends Component {
   render() {
