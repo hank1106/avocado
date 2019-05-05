@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import MusicCarousel from './MusicCarousel.js';
 import '../css/Music.css';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import TopListWidget from './TopListWidget.js';
 
 class Music extends Component {
   constructor(props) {
@@ -48,14 +49,19 @@ class Music extends Component {
               onChange={this.handleChange}
               onKeyDown={this.handleKeyDown}/>
           </form>
-          <div class="col-1">
+          <div className="col-1">
             <button onClick={this.handleSearch}>
               Search
             </button>
           </div>
-          <div class="col-3"></div>
+          <div className="col-3"></div>
         </div>
-        <MusicCarousel />
+        <div className="flex justify-start ml4">
+          <MusicCarousel />
+          <div className="ml2 mt2">
+            <TopListWidget />
+          </div>
+        </div>
       </div>
     );
   }

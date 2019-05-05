@@ -1,3 +1,29 @@
 .input_box{
   width: 100%;
 }
+.top_list_img{
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+}
+
+.toplist_subtext{
+  color:grey;
+  white-space: nowrap;
+}
+
+ul{
+  padding: 0;
+}
+
+.toplist_box{
+  width: 280px;
+}
+
+.list_cutoff{
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}

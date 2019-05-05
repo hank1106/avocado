@@ -8,7 +8,7 @@ import '../css/MusicCarousel.css';
 class MusicCarousel extends Component {
     render() {
         return (
-          <div className="flex mt4 ml4">
+          <div className="flex mt4">
             <Carousel controls={false} className="caro desc ml3 border-top">
               <Carousel.Item>
                <div className="clearfix pt2">
