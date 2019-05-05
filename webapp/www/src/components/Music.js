@@ -56,7 +56,7 @@ class Music extends Component {
           </div>
           <div className="col-3"></div>
         </div>
-        <div className="flex justify-between ml4 pr3">
+        <div className="flex justify-around ml4 pr3">
           <MusicCarousel />
           <div className="ml2 mt2">
             <TopListWidget />
