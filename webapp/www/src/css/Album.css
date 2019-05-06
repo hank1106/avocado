@@ -1,0 +1,14 @@
+.bookmark_button {
+  background-color: #505050;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  padding: 3px 7px;
+}
+
+.rater_div{
+   padding-top: 1px;
+}
