@@ -3,7 +3,7 @@ import logo from '../logo.svg';
 import _ from "lodash";
 import {BrowserRouter} from "react-router-dom";
 import '../css/Search.css';
-import Rater from 'react-rater'
+import Rater from 'react-rater';
 
 class Home extends Component {
   constructor(props) {
@@ -11,10 +11,11 @@ class Home extends Component {
 	}
   render() {
     const albums= this.props.albums;
+
     return (
       <div>
         <BrowserRouter basename="/Album" />
-				<ul className="m5">
+				<ul className="m5 search_result_album">
 					{albums.map(album => {
             if(album.mbid == "") return;
 						return <div className="mt2 flex flex-wrap content-end">

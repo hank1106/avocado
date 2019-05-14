@@ -15,5 +15,10 @@
 }
 
 .search_result{
-  margin-left: 85px;
+  margin-left: 100px;
+}
+
+.search_result_album{
+  margin-left:55px;
+  margin-top:20px;
 }

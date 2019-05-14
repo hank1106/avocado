@@ -38,8 +38,8 @@ class Search extends Component {
     if (albums == null) return null;
     return (
       <div>
-        <div className="search_result mt2">Search Results for {this.state.searchTerm}</div>
-        <SearchAlbums albums={albums} />
+        <div className="search_result mt3">Search Results for {this.state.searchTerm}</div>
+        <SearchAlbums albums={albums}/>
 			</div>
     );
   }
